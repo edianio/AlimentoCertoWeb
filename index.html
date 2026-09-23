@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de Privacidade — Alimento Certo</title>
   <meta name="description" content="Política de privacidade do aplicativo Alimento Certo: o que fica no aparelho, o que é enviado ao Firebase e como falar com o desenvolvedor.">
-  <link rel="canonical" href="https://edianio.github.io/AlimentoCerto/">
+  <link rel="canonical" href="https://edianio.github.io/AlimentoCertoWeb/">
   <meta name="theme-color" content="#1f4d32">
   <style>
     :root {
@@ -139,7 +139,7 @@
     <h1>Política de Privacidade</h1>
     <p class="meta">
       <span>Alimento Certo</span>
-      <span>Vigente a partir de 22 de setembro de 2026</span>
+      <span>Vigente a partir de 23 de setembro de 2026</span>
       <a href="termos.html">Termos de uso</a>
     </p>
   </header>
@@ -148,8 +148,9 @@
     <p>
       Esta política explica quais informações o aplicativo <strong>Alimento Certo</strong>
       trata, para que servem e com quem são compartilhadas. O aplicativo é um diário
-      alimentar e de atividades, com catálogo de alimentos, atividades e receitas.
-      Não há anúncios e não há criação de conta.
+      alimentar e de atividades, com catálogo de alimentos, atividades e receitas,
+      e um histórico de composição corporal informado por você. Não há anúncios e
+      não há criação de conta.
     </p>
 
     <h2>Quem é o responsável</h2>
@@ -163,10 +164,11 @@
     <p>
       O que você cadastra fica no banco local do aplicativo, no próprio aparelho.
       Esses dados não são enviados a um servidor nosso. Não operamos nuvem de perfil,
-      diário ou receitas pessoais.
+      medições, diário ou receitas pessoais.
     </p>
     <ul>
-      <li>Perfil: nome, e-mail, peso, altura, sexo e data de nascimento. O e-mail não é usado para contato nem para login. Peso e altura servem para calcular o IMC e a faixa de peso na tela.</li>
+      <li>Perfil: nome, e-mail, altura em centímetros, sexo e data de nascimento. O e-mail não é usado para contato nem para login. A altura, junto com o peso da última medição, serve para calcular o IMC e a faixa de peso na tela.</li>
+      <li>Medições de composição corporal: data e hora, peso e, se você informar, gordura corporal, massa muscular, água corporal, gordura visceral, massa óssea e metabolismo basal da balança. Massa de gordura e massa magra são calculadas na tela e não ficam gravadas. Esses registros são informações de saúde e permanecem no aparelho.</li>
       <li>Diário alimentar: refeições, alimentos, quantidades e calorias.</li>
       <li>Alimentos e receitas criados por você, inclusive ingredientes e modo de preparo.</li>
       <li>Atividades registradas por dia.</li>
@@ -185,8 +187,8 @@
     <h2>Dados enviados a serviços do Google</h2>
     <p>
       O catálogo, as estatísticas de uso e os relatórios de falha usam o Firebase,
-      operado pelo Google. O aplicativo não grava perfil, diário, alimentos pessoais
-      nem receitas pessoais no Firestore. As consultas ao catálogo são somente leitura.
+      operado pelo Google. O aplicativo não grava perfil, medições, diário, alimentos
+      pessoais nem receitas pessoais no Firestore. As consultas ao catálogo são somente leitura.
     </p>
     <table>
       <thead>
@@ -199,7 +201,7 @@
       <tbody>
         <tr>
           <td data-label="Serviço">Cloud Firestore</td>
-          <td data-label="O que é enviado">Pedido de leitura do catálogo público de alimentos, atividades e receitas. Nenhum dado do seu perfil ou diário é gravado lá.</td>
+          <td data-label="O que é enviado">Pedido de leitura do catálogo público de alimentos, atividades e receitas. Nenhum dado do seu perfil, das medições ou do diário é gravado lá.</td>
           <td data-label="Para que serve">Mostrar o catálogo e guardá-lo em cache no aparelho para consulta offline.</td>
         </tr>
         <tr>
@@ -215,7 +217,7 @@
         <tr>
           <td data-label="Serviço">Firebase Crashlytics</td>
           <td data-label="O que é enviado">Relato técnico da falha: pilha de erro, modelo do aparelho, sistema, versão do aplicativo e um identificador da instalação.</td>
-          <td data-label="Para que serve">Corrigir defeitos. O relato não é feito para registrar nome, e-mail, peso, altura ou o texto do diário.</td>
+          <td data-label="Para que serve">Corrigir defeitos. O relato não é feito para registrar nome, e-mail, peso, altura, valores de composição corporal ou o texto do diário.</td>
         </tr>
         <tr>
           <td data-label="Serviço">Avaliação na Google Play</td>
@@ -234,11 +236,13 @@
     <h2>O que o Analytics registra</h2>
     <p>
       Os eventos do aplicativo levam contagens, tipos e identificadores internos.
-      Não incluem nome, e-mail, peso, altura, sexo, data de nascimento nem o nome
-      dos alimentos ou receitas que você digitou.
+      Não incluem nome, e-mail, peso, altura, sexo, data de nascimento, valores de
+      composição corporal nem o nome dos alimentos ou receitas que você digitou.
     </p>
     <ul>
       <li>Telas abertas, pelo nome da rota.</li>
+      <li>Ao salvar o perfil: só o fato de ter sido salvo, sem os dados cadastrados.</li>
+      <li>Ao salvar ou excluir uma medição de composição corporal: só o fato da ação, sem peso, data ou demais valores.</li>
       <li>Ao salvar uma refeição: tipo da refeição, quantidade de itens e total de calorias arredondado.</li>
       <li>Ao salvar as atividades do dia: quantidade de itens e total de calorias arredondado.</li>
       <li>Ao salvar ou excluir um alimento ou uma receita pessoal: indicação de item novo, quando couber, e um identificador interno, sem o texto cadastrado.</li>
@@ -274,26 +278,28 @@
       <li>Não vendemos dados pessoais.</li>
       <li>Não exibimos anúncios.</li>
       <li>Não criamos conta nem fazemos login.</li>
-      <li>Não enviamos o perfil nem o conteúdo do diário para um servidor nosso.</li>
+      <li>Não enviamos o perfil, as medições nem o conteúdo do diário para um servidor nosso.</li>
       <li>Não usamos os dados para decisão automatizada que produza efeito sobre você fora do aplicativo.</li>
     </ul>
 
     <h2>Crianças</h2>
     <p>
       O Alimento Certo não é dirigido a crianças menores de 13 anos. Não coletamos
-      intencionalmente dados de crianças em servidor. Informações de perfil gravadas
-      no aparelho permanecem locais, como descrito acima.
+      intencionalmente dados de crianças em servidor. Informações de perfil e
+      medições gravadas no aparelho permanecem locais, como descrito acima.
     </p>
 
     <h2>Bases da LGPD</h2>
     <p>
       Para quem está no Brasil, o tratamento observa a Lei nº 13.709/2018.
-      O perfil e o diário são processados no aparelho para prestar a função que você
-      pediu, como calcular o IMC e guardar as refeições. As estatísticas de uso e os
-      relatórios de falha se apoiam no legítimo interesse de manter o aplicativo
-      estável e entender o uso das funções, limitado aos dados descritos nesta política.
-      O catálogo é consultado para executar o recurso de busca de alimentos, atividades
-      e receitas.
+      O perfil, as medições e o diário são processados no aparelho para prestar a
+      função que você pediu, como calcular o IMC, guardar o histórico corporal e
+      registrar as refeições. Peso e demais parâmetros de composição corporal são
+      dados de saúde: ficam no aparelho e não entram nos eventos de Analytics nem
+      nos relatórios de falha. As estatísticas de uso e os relatórios de falha se
+      apoiam no legítimo interesse de manter o aplicativo estável e entender o uso
+      das funções, limitado aos dados descritos nesta política. O catálogo é
+      consultado para executar o recurso de busca de alimentos, atividades e receitas.
     </p>
 
     <h2>Por quanto tempo os dados ficam</h2>
@@ -314,7 +320,8 @@
     <p>
       O Google pode processar dados do Firebase fora do Brasil, inclusive nos Estados
       Unidos, segundo as próprias políticas e cláusulas de transferência. Os dados do
-      diário e do perfil descritos como locais não entram nessa transferência por ação nossa.
+      diário, do perfil e das medições descritos como locais não entram nessa
+      transferência por ação nossa.
     </p>
 
     <h2>Seus direitos</h2>
@@ -325,7 +332,7 @@
       Na prática:
     </p>
     <ul>
-      <li>Dados do perfil, diário, alimentos e receitas pessoais: edite ou apague no aplicativo, ou limpe os dados do app nas configurações do sistema.</li>
+      <li>Dados do perfil, das medições, do diário, dos alimentos e das receitas pessoais: edite ou apague no aplicativo, ou limpe os dados do app nas configurações do sistema.</li>
       <li>Estatísticas e relatórios de falha: escreva para o e-mail abaixo. A exclusão no Firebase depende dos identificadores da instalação mantidos pelo Google.</li>
     </ul>
     <p>
@@ -348,7 +355,7 @@
   </main>
 
   <footer>
-    Alimento Certo · br.com.alimentocerto · Política de privacidade de 22 de setembro de 2026.
+    Alimento Certo · br.com.alimentocerto · Política de privacidade de 23 de setembro de 2026.
   </footer>
 </body>
 </html>
