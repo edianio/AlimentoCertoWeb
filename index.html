@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Política de Privacidade — Alimento Certo</title>
-  <meta name="description" content="Política de privacidade do aplicativo Alimento Certo: o que fica no aparelho, o que é enviado ao Firebase e como falar com o desenvolvedor.">
+  <meta name="description" content="Política de privacidade do aplicativo Alimento Certo: o que fica no aparelho, o que é compartilhado com serviços do Google e como falar com o desenvolvedor.">
   <link rel="canonical" href="https://edianio.github.io/AlimentoCertoWeb/">
   <meta name="theme-color" content="#1f4d32">
   <style>
@@ -139,7 +139,7 @@
     <h1>Política de Privacidade</h1>
     <p class="meta">
       <span>Alimento Certo</span>
-      <span>Vigente a partir de 23 de setembro de 2026</span>
+      <span>Vigente a partir de 7 de outubro de 2026</span>
       <a href="termos.html">Termos de uso</a>
     </p>
   </header>
@@ -147,10 +147,10 @@
   <main>
     <p>
       Esta política explica quais informações o aplicativo <strong>Alimento Certo</strong>
-      trata, para que servem e com quem são compartilhadas. O aplicativo é um diário
-      alimentar e de atividades, com catálogo de alimentos, atividades e receitas,
-      e um histórico de composição corporal informado por você. Não há anúncios e
-      não há criação de conta.
+      trata, para que servem e com quem são compartilhadas. O aplicativo permite acompanhar
+      alimentação, atividades, metas pessoais e composição corporal. Não há criação de
+      conta. O app tem integração com publicidade e pode exibir anúncios, conforme a
+      disponibilidade e as configurações em uso.
     </p>
 
     <h2>Quem é o responsável</h2>
@@ -162,20 +162,29 @@
 
     <h2>Dados que ficam no aparelho</h2>
     <p>
-      O que você cadastra fica no banco local do aplicativo, no próprio aparelho.
-      Esses dados não são enviados a um servidor nosso. Não operamos nuvem de perfil,
-      medições, diário ou receitas pessoais.
+      Seus registros pessoais ficam no aparelho. Não oferecemos conta nem sincronização
+      desses registros com uma nuvem nossa. As informações limitadas de uso enviadas aos
+      serviços do Google estão descritas nas próximas seções.
     </p>
     <ul>
-      <li>Perfil: nome, e-mail, altura em centímetros, sexo e data de nascimento. O e-mail não é usado para contato nem para login. A altura, junto com o peso da última medição, serve para calcular o IMC e a faixa de peso na tela.</li>
-      <li>Medições de composição corporal: data e hora, peso e, se você informar, gordura corporal, massa muscular, água corporal, gordura visceral, massa óssea e metabolismo basal da balança. Massa de gordura e massa magra são calculadas na tela e não ficam gravadas. Esses registros são informações de saúde e permanecem no aparelho.</li>
-      <li>Diário alimentar: refeições, alimentos, quantidades e calorias.</li>
-      <li>Alimentos e receitas criados por você, inclusive ingredientes e modo de preparo.</li>
-      <li>Atividades registradas por dia.</li>
-      <li>Preferências locais: horário da última atualização do catálogo e o controle para não repetir o pedido de avaliação na loja.</li>
+      <li>Perfil: nome, e-mail, altura, sexo e data de nascimento. O e-mail não é usado para contato nem para login.</li>
+      <li>Metas opcionais: objetivo pessoal, peso desejado e calorias diárias. Você pode alterar ou remover essas metas.</li>
+      <li>Medições corporais: data e hora, peso e, se você informar, gordura corporal, massa muscular, água corporal, gordura visceral, massa óssea e metabolismo basal da balança. Esses registros são informações de saúde e permanecem no aparelho.</li>
+      <li>Diário alimentar: refeições, alimentos, quantidades, calorias e nutrientes disponíveis, com a fonte da informação nutricional quando informada.</li>
+      <li>Alimentos, atividades e receitas criados por você, incluindo duração, calorias, nutrientes, ingredientes e modo de preparo, quando aplicáveis.</li>
+      <li>Atividades registradas por dia, com as quantidades e os valores informados.</li>
+      <li>Alimentos favoritos e referências aos alimentos utilizados nas refeições.</li>
+      <li>Preferências locais, como o controle de atualização do catálogo e do pedido de avaliação na loja.</li>
     </ul>
     <p>
-      Você pode editar ou apagar esses registros nas telas do aplicativo.
+      Recentes, resumos, gráficos, comparações e indicadores de frequência de registros
+      são calculados a partir do histórico no aparelho. O mesmo vale para IMC, massa de
+      gordura, massa magra e estimativa de metabolismo basal. As medições e os valores
+      das metas não são enviados nas estatísticas de uso. O tipo do objetivo pessoal
+      pode ser enviado, como explicado abaixo.
+    </p>
+    <p>
+      Você pode editar ou apagar registros e remover favoritos nas telas do aplicativo.
       Limpar os dados do aplicativo ou desinstalá-lo remove essa cópia local.
     </p>
     <p>
@@ -184,156 +193,157 @@
       e as configurações de backup do próprio usuário. Nós não acessamos esse backup.
     </p>
 
-    <h2>Dados enviados a serviços do Google</h2>
+    <h2>Informações compartilhadas com o Google</h2>
     <p>
-      O catálogo, as estatísticas de uso e os relatórios de falha usam o Firebase,
-      operado pelo Google. O aplicativo não grava perfil, medições, diário, alimentos
-      pessoais nem receitas pessoais no Firestore. As consultas ao catálogo são somente leitura.
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Serviço</th>
-          <th>O que é enviado</th>
-          <th>Para que serve</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Serviço">Cloud Firestore</td>
-          <td data-label="O que é enviado">Pedido de leitura do catálogo público de alimentos, atividades e receitas. Nenhum dado do seu perfil, das medições ou do diário é gravado lá.</td>
-          <td data-label="Para que serve">Mostrar o catálogo e guardá-lo em cache no aparelho para consulta offline.</td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Firebase App Check</td>
-          <td data-label="O que é enviado">Atestação do aplicativo, no Android pelo Play Integrity.</td>
-          <td data-label="Para que serve">Confirmar que a consulta ao catálogo parte do aplicativo oficial.</td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Firebase Analytics</td>
-          <td data-label="O que é enviado">Uso agregado descrito na seção seguinte, mais dados técnicos que o Firebase coleta por padrão.</td>
-          <td data-label="Para que serve">Entender quais telas e funções são usadas, sem montar um perfil alimentar identificado.</td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Firebase Crashlytics</td>
-          <td data-label="O que é enviado">Relato técnico da falha: pilha de erro, modelo do aparelho, sistema, versão do aplicativo e um identificador da instalação.</td>
-          <td data-label="Para que serve">Corrigir defeitos. O relato não é feito para registrar nome, e-mail, peso, altura, valores de composição corporal ou o texto do diário.</td>
-        </tr>
-        <tr>
-          <td data-label="Serviço">Avaliação na Google Play</td>
-          <td data-label="O que é enviado">O pedido de avaliação usa a API da loja. Nota e comentário, se você enviar, ficam com a Google Play.</td>
-          <td data-label="Para que serve">Convidar quem já usa o diário a avaliar o aplicativo. Nós não recebemos o texto da avaliação pelo aplicativo.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p>
-      A política do Google descreve o tratamento feito por esses serviços:
-      <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>
-      e
-      <a href="https://firebase.google.com/support/privacy">privacidade do Firebase</a>.
-    </p>
-
-    <h2>O que o Analytics registra</h2>
-    <p>
-      Os eventos do aplicativo levam contagens, tipos e identificadores internos.
-      Não incluem nome, e-mail, peso, altura, sexo, data de nascimento, valores de
-      composição corporal nem o nome dos alimentos ou receitas que você digitou.
+      Usamos serviços do Google para consultar o catálogo, proteger o acesso, ajustar
+      a disponibilidade de recursos, entender o uso, corrigir falhas e oferecer publicidade.
+      Não enviamos os registros completos do perfil, das medições, do diário ou dos
+      cadastros pessoais para esses serviços.
     </p>
     <ul>
-      <li>Telas abertas, pelo nome da rota.</li>
-      <li>Ao salvar o perfil: só o fato de ter sido salvo, sem os dados cadastrados.</li>
-      <li>Ao salvar ou excluir uma medição de composição corporal: só o fato da ação, sem peso, data ou demais valores.</li>
-      <li>Ao salvar uma refeição: tipo da refeição, quantidade de itens e total de calorias arredondado.</li>
-      <li>Ao salvar as atividades do dia: quantidade de itens e total de calorias arredondado.</li>
-      <li>Ao salvar ou excluir um alimento ou uma receita pessoal: indicação de item novo, quando couber, e um identificador interno, sem o texto cadastrado.</li>
-      <li>Ao compartilhar uma receita: o tipo “receita” e o identificador interno do item.</li>
-      <li>Ao escolher um dia no diário: a distância em dias em relação a hoje, sem a data do calendário.</li>
-      <li>Ao pedir avaliação: a etapa do pedido, a data do último pedido e, na primeira vez, quantos dias já têm alimento registrado.</li>
+      <li>Catálogo e proteção do acesso: pedidos de consulta e informações necessárias para verificar a autenticidade do aplicativo. O catálogo pode ser guardado no aparelho para uso offline.</li>
+      <li>Configurações do aplicativo: informações como versão do app e do sistema, idioma, país, fuso horário e identificadores da instalação, usadas para disponibilizar recursos e configurações.</li>
+      <li>Estatísticas de uso: ações descritas na seção seguinte, além de informações do aparelho e da instalação.</li>
+      <li>Relatórios de falha: descrição técnica do erro, modelo do aparelho, sistema, versão do aplicativo e identificadores da instalação. Não cadastramos nome, e-mail, medições ou o texto do diário nesses relatórios.</li>
+      <li>Publicidade: informações descritas na seção de anúncios.</li>
+      <li>Avaliação na loja: se você enviar uma nota ou comentário, eles ficam com a loja. Nós não recebemos o texto pelo aplicativo.</li>
     </ul>
     <p>
-      Além disso, o Firebase Analytics coleta por conta própria dados técnicos da
-      instalação, como identificador do aplicativo no aparelho, modelo, versão do
-      sistema e do aplicativo, idioma e país aproximado derivado do endereço IP.
-      No Android, o identificador de publicidade pode ser coletado quando o sistema
-      o disponibiliza. O Alimento Certo não exibe anúncios e não usa esse identificador
-      para publicidade.
+      O tratamento realizado pelo Google é descrito na
+      <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>,
+      nas <a href="https://firebase.google.com/support/privacy">informações de privacidade dos serviços de apoio ao aplicativo</a>
+      e nas <a href="https://policies.google.com/technologies/ads">informações sobre publicidade do Google</a>.
+    </p>
+
+    <h2>Estatísticas de uso</h2>
+    <p>
+      Registramos ações, contagens, categorias e identificadores internos para entender
+      quais funções são usadas. Esses eventos não incluem nome, e-mail, altura, sexo,
+      nascimento, valores de peso ou composição corporal, nem os nomes de alimentos,
+      atividades ou receitas que você digitou.
+    </p>
+    <ul>
+      <li>Telas e resumos abertos, períodos escolhidos, gráficos e comparações visualizados. Nos gráficos corporais, registramos o tipo de medida escolhido, como peso ou IMC, sem seu valor.</li>
+      <li>Ao salvar o perfil: se há objetivo, meta de peso e meta de calorias, além da categoria do objetivo, como perder peso ou ganhar massa muscular. Não enviamos o peso desejado nem a meta de calorias.</li>
+      <li>Ao salvar ou excluir uma medição: o fato da ação, sem a data ou os valores medidos.</li>
+      <li>Ao salvar uma refeição ou as atividades do dia: quantidade de itens e total de calorias arredondado; nas refeições, também o tipo de refeição.</li>
+      <li>Ao copiar uma refeição: tipo da refeição de destino e quantidade de itens, sem nomes, datas ou valores nutricionais.</li>
+      <li>Ao selecionar um alimento recente ou marcar e desmarcar favoritos: identificador do alimento e, conforme a ação, tipo da refeição ou indicação de alimento personalizado.</li>
+      <li>Ao salvar ou excluir um alimento, uma atividade ou uma receita pessoal: indicação de item novo ou identificador interno, conforme a ação, sem o texto cadastrado. Ao criar uma atividade pessoal, também enviamos as calorias arredondadas.</li>
+      <li>Ao abrir detalhes de macronutrientes: o fato da abertura, sem os valores exibidos.</li>
+      <li>Ao compartilhar uma receita: indicação de receita e seu identificador interno.</li>
+      <li>Ao escolher um dia no diário ou nas atividades: distância em dias em relação a hoje, sem a data do calendário.</li>
+      <li>Ao pedir avaliação: etapa do pedido, data do último pedido e, na primeira vez, quantidade de dias com alimento registrado.</li>
+    </ul>
+    <p>
+      Os serviços de estatísticas também podem coletar identificadores da instalação e
+      de publicidade, modelo do aparelho, versões do sistema e do aplicativo, idioma e
+      localização aproximada derivada do endereço IP. Não pedimos acesso à localização
+      precisa. A presença de identificadores significa que essas informações não devem
+      ser consideradas completamente anônimas.
+    </p>
+
+    <h2>Publicidade</h2>
+    <p>
+      O Alimento Certo utiliza a integração de publicidade do Google e pode exibir
+      anúncios para apoiar sua manutenção. Os serviços integrados podem tratar endereço
+      IP, localização aproximada, identificadores do aparelho e de publicidade,
+      interações com o app e os anúncios e informações de funcionamento. Esses dados
+      podem ser usados para publicidade, medição de resultados e prevenção de fraude,
+      conforme as configurações e opções disponíveis.
+    </p>
+    <p>
+      A ausência de anúncios visíveis não significa, por si só, que os serviços
+      integrados deixem de tratar informações técnicas. Não fornecemos aos serviços de
+      publicidade seu nome, e-mail, medições corporais, valores de metas ou o conteúdo
+      dos registros pessoais para selecionar anúncios. Os banners atuais são solicitados
+      sem personalização por interesses.
+    </p>
+    <p>
+      Você pode administrar o identificador de publicidade nas configurações do aparelho.
+      Quando exigido para sua instalação, o app oferece “Opções de privacidade” na tela
+      Sobre para consultar e alterar suas escolhas de publicidade. Esse formulário é
+      separado da leitura desta política e dos termos de uso.
+      Alterar o identificador de publicidade não interrompe todo o tratamento de
+      informações técnicas.
+      Pedidos sobre privacidade também podem ser enviados ao contato abaixo.
     </p>
 
     <h2>Compartilhamento que você inicia</h2>
     <p>
-      O botão de compartilhar receita abre o menu do sistema. O texto segue apenas
-      para o aplicativo que você escolher, como mensagem ou e-mail. Nós não recebemos
-      essa cópia.
+      Compartilhar uma receita abre o menu do sistema. O texto segue para o aplicativo
+      escolhido por você, como mensagem ou e-mail, e passa a seguir as práticas desse
+      destinatário. Nós não recebemos essa cópia.
     </p>
 
-    <h2>Permissões</h2>
+    <h2>Acesso ao aparelho</h2>
     <p>
-      A única permissão declarada é a de internet, usada para baixar o catálogo e
-      enviar estatísticas e relatórios de falha. O aplicativo não pede localização,
-      contatos, câmera, microfone, fotos ou arquivos.
+      O app usa internet para consultar o catálogo, receber configurações e acessar os
+      serviços de estatísticas, falhas e publicidade. Esses serviços também podem usar
+      informações de conexão e identificadores disponibilizados pelo sistema.
+      O aplicativo não pede acesso à localização precisa, contatos, câmera, microfone,
+      fotos ou arquivos pessoais.
     </p>
 
     <h2>O que não fazemos</h2>
     <ul>
-      <li>Não vendemos dados pessoais.</li>
-      <li>Não exibimos anúncios.</li>
+      <li>Não vendemos seus registros pessoais.</li>
       <li>Não criamos conta nem fazemos login.</li>
-      <li>Não enviamos o perfil, as medições nem o conteúdo do diário para um servidor nosso.</li>
-      <li>Não usamos os dados para decisão automatizada que produza efeito sobre você fora do aplicativo.</li>
+      <li>Não sincronizamos seus registros pessoais com uma nuvem nossa.</li>
+      <li>Não usamos os registros locais para decisões automatizadas com efeitos sobre você fora do aplicativo.</li>
     </ul>
 
     <h2>Crianças</h2>
     <p>
       O Alimento Certo não é dirigido a crianças menores de 13 anos. Não coletamos
-      intencionalmente dados de crianças em servidor. Informações de perfil e
-      medições gravadas no aparelho permanecem locais, como descrito acima.
+      intencionalmente dados de crianças em servidor. Os registros pessoais no aparelho
+      seguem o tratamento local descrito acima.
     </p>
 
-    <h2>Bases da LGPD</h2>
+    <h2>Tratamento de dados no Brasil</h2>
     <p>
-      Para quem está no Brasil, o tratamento observa a Lei nº 13.709/2018.
-      O perfil, as medições e o diário são processados no aparelho para prestar a
-      função que você pediu, como calcular o IMC, guardar o histórico corporal e
-      registrar as refeições. Peso e demais parâmetros de composição corporal são
-      dados de saúde: ficam no aparelho e não entram nos eventos de Analytics nem
-      nos relatórios de falha. As estatísticas de uso e os relatórios de falha se
-      apoiam no legítimo interesse de manter o aplicativo estável e entender o uso
-      das funções, limitado aos dados descritos nesta política. O catálogo é
-      consultado para executar o recurso de busca de alimentos, atividades e receitas.
+      Para quem está no Brasil, o tratamento deve observar a Lei Geral de Proteção de
+      Dados (Lei nº 13.709/2018). Os registros locais são usados para as funções que você
+      solicita, como guardar refeições, acompanhar metas e calcular indicadores.
+      Os valores de peso e composição corporal são dados de saúde e permanecem no aparelho.
+      As estatísticas de uso e os relatórios de falha têm a finalidade de melhorar o app
+      e corrigir defeitos, limitados às informações descritas nesta política.
+      Quando o tratamento exigir consentimento, ele deve ser obtido antes desse
+      tratamento e pode ser revogado. Continuar usando o aplicativo não substitui esse
+      consentimento.
     </p>
 
     <h2>Por quanto tempo os dados ficam</h2>
     <ul>
-      <li>No aparelho: até você apagar o registro, limpar os dados do aplicativo ou desinstalá-lo.</li>
-      <li>No Firebase: pelo prazo de retenção da conta do projeto, conforme as configurações do Google Analytics para Firebase e do Crashlytics. Desinstalar o aplicativo interrompe coletas novas daquela instalação.</li>
+      <li>No aparelho: até você apagar o registro, remover o favorito, limpar os dados do aplicativo ou desinstalá-lo. Um backup do sistema pode manter outra cópia, sob suas configurações.</li>
+      <li>Nos serviços do Google: conforme os prazos e as configurações de retenção de cada serviço. Desinstalar o aplicativo interrompe novos envios pelo app, mas não apaga automaticamente informações já enviadas.</li>
     </ul>
 
     <h2>Segurança</h2>
     <p>
-      O acesso de escrita ao catálogo no Firestore é bloqueado para clientes, e as
-      leituras exigem App Check. Ainda assim, nenhum aplicativo é livre de risco.
-      Os dados locais dependem também da proteção do aparelho, como bloqueio de tela
-      e backup da conta.
+      Usamos medidas de proteção nas comunicações com os serviços e no acesso ao catálogo.
+      Ainda assim, nenhum aplicativo é livre de risco. Os dados locais dependem também
+      da proteção do aparelho, como bloqueio de tela e configurações de backup.
     </p>
 
     <h2>Transferência internacional</h2>
     <p>
-      O Google pode processar dados do Firebase fora do Brasil, inclusive nos Estados
-      Unidos, segundo as próprias políticas e cláusulas de transferência. Os dados do
-      diário, do perfil e das medições descritos como locais não entram nessa
-      transferência por ação nossa.
+      Os serviços do Google podem processar as informações compartilhadas fora do Brasil,
+      inclusive nos Estados Unidos, conforme suas políticas e regras de transferência.
+      Os registros pessoais descritos como locais não são enviados por nós nessa
+      transferência. As informações limitadas de uso e publicidade seguem as seções acima.
     </p>
 
     <h2>Seus direitos</h2>
     <p>
-      Você pode confirmar a existência de tratamento, acessar, corrigir e eliminar
-      os dados que estejam sob nosso controle, além de pedir informações sobre o
-      compartilhamento e revogar um consentimento quando ele for a base do tratamento.
-      Na prática:
+      Você pode pedir informações sobre o tratamento e o compartilhamento, acessar,
+      corrigir e solicitar a eliminação de dados sob nosso controle e revogar consentimento
+      quando ele for a base do tratamento. Na prática:
     </p>
     <ul>
-      <li>Dados do perfil, das medições, do diário, dos alimentos e das receitas pessoais: edite ou apague no aplicativo, ou limpe os dados do app nas configurações do sistema.</li>
-      <li>Estatísticas e relatórios de falha: escreva para o e-mail abaixo. A exclusão no Firebase depende dos identificadores da instalação mantidos pelo Google.</li>
+      <li>Registros locais e favoritos: edite, apague ou remova no aplicativo, ou limpe os dados nas configurações do aparelho.</li>
+      <li>Informações compartilhadas com os serviços: escreva para o e-mail abaixo. O atendimento depende das informações e dos identificadores disponíveis; não temos uma conta de usuário para localizar todos os envios pelo seu nome ou e-mail.</li>
+      <li>Backups do sistema: gerencie as cópias nas configurações da sua conta e do aparelho.</li>
     </ul>
     <p>
       Você também pode peticionar à Autoridade Nacional de Proteção de Dados
@@ -342,9 +352,9 @@
 
     <h2>Alterações</h2>
     <p>
-      Se o tratamento mudar, esta página será atualizada e a data no topo passará
-      a indicar a nova versão. O uso do aplicativo depois da publicação segue a
-      política vigente nesta página.
+      Esta página será atualizada quando as práticas mudarem. A data no topo identifica
+      a versão do documento. Uma atualização da política não substitui o consentimento
+      quando ele for necessário.
     </p>
 
     <h2>Contato</h2>
@@ -355,7 +365,7 @@
   </main>
 
   <footer>
-    Alimento Certo · br.com.alimentocerto · Política de privacidade de 23 de setembro de 2026.
+    Alimento Certo · br.com.alimentocerto · Política de privacidade de 7 de outubro de 2026.
   </footer>
 </body>
 </html>
